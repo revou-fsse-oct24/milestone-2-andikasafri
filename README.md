@@ -1,10 +1,16 @@
 # E-commerce Web Application
 
-![Website Screenshot](insert-your-image-link-here)
+![Website Screenshot](/assets/lulu.gif)()
 
 Welcome to the **E-commerce Web Application** project! This document provides an overview of the project, its structure, features, and the struggles faced during its development. This README will serve as a comprehensive guide to understanding and using the application.
 
 ---
+
+Connect with me:
+
+[![Linkedin Badge](https://img.shields.io/badge/-Andika_Safri-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/andika-safri/)
+[![Instagram Badge](https://img.shields.io/badge/-Andika_Safri-purple?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/dikko_pujangga/)
+[![Gmail Badge](https://img.shields.io/badge/-andika.saf3@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white)](mailto:andika.saf3@gmail.com)
 
 ## **Table of Contents**
 
@@ -15,7 +21,6 @@ Welcome to the **E-commerce Web Application** project! This document provides an
 5. [Setup Instructions](#setup-instructions)
 6. [Struggles Faced](#struggles-faced)
 7. [Future Improvements](#future-improvements)
-8. [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -142,12 +147,6 @@ To run this project locally, follow these steps:
 3. **Performance Optimization**:
    - Use `React.memo` or `useMemo` for optimization.
    - Implement lazy loading for components.
-
----
-
-## **Acknowledgments**
-
-Special thanks to the developers and the community for their support and contributions to this project.
 
 ---
 
