@@ -11,7 +11,7 @@ interface ProductCardProps {
 /**
  * Product card component displaying product information
  * Includes image, title, description, price, and add to cart functionality
- * 
+ *
  * @component
  * @example
  * ```tsx

@@ -3,7 +3,7 @@ import styled from "styled-components";
 /**
  * Animated hand loader component
  * Creates a playful loading animation using CSS animations
- * 
+ *
  * @component
  * @example
  * ```tsx
@@ -25,7 +25,7 @@ const Loader = () => (
 
 const StyledWrapper = styled.div`
   .hand {
-    --skin-color: #E4C560;
+    --skin-color: #e4c560;
     --tap-speed: 0.6s;
     --tap-stagger: 0.1s;
     position: relative;
@@ -35,7 +35,7 @@ const StyledWrapper = styled.div`
   }
 
   .hand:before {
-    content: '';
+    content: "";
     display: block;
     width: 180%;
     height: 75%;
@@ -76,7 +76,7 @@ const StyledWrapper = styled.div`
   .thumb:after {
     width: 20%;
     height: 60%;
-    content: '';
+    content: "";
     background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
     bottom: -8%;
@@ -100,7 +100,7 @@ const StyledWrapper = styled.div`
   }
 
   .finger:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 140%;
     height: 30px;
@@ -137,23 +137,47 @@ const StyledWrapper = styled.div`
   }
 
   @keyframes tap-upper-1 {
-    0%, 50%, 100% { transform: rotate(10deg) scale(0.4); }
-    40% { transform: rotate(50deg) scale(0.4); }
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.4);
+    }
+    40% {
+      transform: rotate(50deg) scale(0.4);
+    }
   }
 
   @keyframes tap-upper-2 {
-    0%, 50%, 100% { transform: rotate(10deg) scale(0.6); }
-    40% { transform: rotate(50deg) scale(0.6); }
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.6);
+    }
+    40% {
+      transform: rotate(50deg) scale(0.6);
+    }
   }
 
   @keyframes tap-upper-3 {
-    0%, 50%, 100% { transform: rotate(10deg) scale(0.8); }
-    40% { transform: rotate(50deg) scale(0.8); }
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(0.8);
+    }
+    40% {
+      transform: rotate(50deg) scale(0.8);
+    }
   }
 
   @keyframes tap-upper-4 {
-    0%, 50%, 100% { transform: rotate(10deg) scale(1); }
-    40% { transform: rotate(50deg) scale(1); }
+    0%,
+    50%,
+    100% {
+      transform: rotate(10deg) scale(1);
+    }
+    40% {
+      transform: rotate(50deg) scale(1);
+    }
   }
 `;
 

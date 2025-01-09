@@ -2,8 +2,8 @@
  * Product-related API endpoints
  */
 
-import api from './config';
-import type { Product } from '../../types';
+import api from "./config";
+import type { Product } from "../../types";
 
 /**
  * Fetch products with pagination
@@ -11,7 +11,10 @@ import type { Product } from '../../types';
  * @param limit - Number of items to fetch
  * @returns Promise containing product data
  */
-export const getProducts = async (offset = 0, limit = 12): Promise<Product[]> => {
+export const getProducts = async (
+  offset = 0,
+  limit = 12
+): Promise<Product[]> => {
   const response = await api.get(`/products?offset=${offset}&limit=${limit}`);
   return response.data;
 };

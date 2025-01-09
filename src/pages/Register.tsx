@@ -4,19 +4,29 @@ import { useAuthStore } from "../store/useAuthStore";
 import toast from "react-hot-toast";
 
 export default function Register() {
+  // State for form inputs
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // Navigation hook for redirecting after registration
   const navigate = useNavigate();
+
+  // Register function from the auth store
   const register = useAuthStore((state) => state.register);
 
+  // Handle form submission
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(); // Prevent default form submission behavior
     try {
+      // Call the register function from the auth store
       await register(name, email, password);
+      // Show success toast notification
       toast.success("Successfully registered!");
+      // Redirect to the home page after successful registration
       navigate("/");
     } catch (error) {
+      // Show error toast notification if registration fails
       toast.error(`Registration failed: ${(error as Error).message}`);
     }
   };
@@ -24,6 +34,7 @@ export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
+        {/* Registration header */}
         <div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Create a new account
@@ -38,8 +49,11 @@ export default function Register() {
             </Link>
           </p>
         </div>
+
+        {/* Registration form */}
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
+            {/* Name input */}
             <div>
               <label htmlFor="name" className="sr-only">
                 Name
@@ -55,6 +69,8 @@ export default function Register() {
                 onChange={(e) => setName(e.target.value)}
               />
             </div>
+
+            {/* Email input */}
             <div>
               <label htmlFor="email-address" className="sr-only">
                 Email address
@@ -71,6 +87,8 @@ export default function Register() {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
+            {/* Password input */}
             <div>
               <label htmlFor="password" className="sr-only">
                 Password
@@ -89,6 +107,7 @@ export default function Register() {
             </div>
           </div>
 
+          {/* Submit button */}
           <div>
             <button
               type="submit"

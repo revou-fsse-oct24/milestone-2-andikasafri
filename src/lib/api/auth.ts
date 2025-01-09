@@ -2,8 +2,8 @@
  * Authentication-related API endpoints
  */
 
-import api from './config';
-import type { User } from '../../types';
+import api from "./config";
+import type { User } from "../../types";
 
 interface LoginResponse {
   access_token: string;
@@ -26,7 +26,7 @@ export const login = async (
   email: string,
   password: string
 ): Promise<LoginResponse> => {
-  const response = await api.post('/auth/login', { email, password });
+  const response = await api.post("/auth/login", { email, password });
   return response.data;
 };
 
@@ -38,9 +38,9 @@ export const login = async (
 export const register = async (userData: RegisterData): Promise<User> => {
   const data = {
     ...userData,
-    avatar: userData.avatar || 'https://api.lorem.space/image/face?w=640&h=480',
+    avatar: userData.avatar || "https://api.lorem.space/image/face?w=640&h=480",
   };
-  const response = await api.post('/users', data);
+  const response = await api.post("/users", data);
   return response.data;
 };
 
@@ -49,6 +49,6 @@ export const register = async (userData: RegisterData): Promise<User> => {
  * @returns Promise containing user profile data
  */
 export const getProfile = async (): Promise<User> => {
-  const response = await api.get('/auth/profile');
+  const response = await api.get("/auth/profile");
   return response.data;
 };

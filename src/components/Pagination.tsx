@@ -11,7 +11,7 @@ interface PaginationProps {
 
 /**
  * Reusable pagination component with dynamic page numbers and navigation
- * 
+ *
  * @component
  * @example
  * ```tsx
@@ -60,7 +60,11 @@ export function Pagination({
   };
 
   return (
-    <nav className="flex items-center justify-center space-x-2 mt-8" role="navigation" aria-label="Pagination">
+    <nav
+      className="flex items-center justify-center space-x-2 mt-8"
+      role="navigation"
+      aria-label="Pagination"
+    >
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
@@ -71,7 +75,7 @@ export function Pagination({
       </button>
 
       <div className="flex space-x-1">
-        {getPageNumbers().map((pageNum, index) => (
+        {getPageNumbers().map((pageNum, index) =>
           pageNum === "..." ? (
             <span
               key={`ellipsis-${index}`}
@@ -95,7 +99,7 @@ export function Pagination({
               {pageNum}
             </button>
           )
-        ))}
+        )}
       </div>
 
       <button

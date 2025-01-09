@@ -14,7 +14,7 @@ interface QuickLink {
 /**
  * Footer component with social links and quick navigation
  * Displays company information, quick links, and social media icons
- * 
+ *
  * @component
  * @example
  * ```tsx

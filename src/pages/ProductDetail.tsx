@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { getProduct } from '../lib/api';
-import { useCartStore } from '../store/useCartStore';
-import { ShoppingCart } from 'lucide-react';
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import { getProduct } from "../lib/api";
+import { useCartStore } from "../store/useCartStore";
+import { ShoppingCart } from "lucide-react";
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
@@ -11,7 +11,7 @@ export default function ProductDetail() {
   const [selectedImage, setSelectedImage] = useState(0);
 
   const { data: product, isLoading } = useQuery({
-    queryKey: ['product', id],
+    queryKey: ["product", id],
     queryFn: () => getProduct(Number(id)),
   });
 
@@ -32,7 +32,7 @@ export default function ProductDetail() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-4 py-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="space-y-4">
           <div className="aspect-w-1 aspect-h-1">
@@ -43,12 +43,12 @@ export default function ProductDetail() {
             />
           </div>
           <div className="grid grid-cols-4 gap-2">
-            {product.images.map((image, index) => (
+            {product.images.map((image: string, index: number) => (
               <button
                 key={index}
                 onClick={() => setSelectedImage(index)}
                 className={`relative rounded-lg overflow-hidden ${
-                  selectedImage === index ? 'ring-2 ring-blue-500' : ''
+                  selectedImage === index ? "ring-2 ring-blue-500" : ""
                 }`}
               >
                 <img

@@ -8,7 +8,7 @@ import { motion, useScroll } from "framer-motion";
 /**
  * Navigation bar component with responsive design and animations
  * Includes user authentication status and cart functionality
- * 
+ *
  * @component
  */
 export default function Navbar() {
@@ -49,7 +49,10 @@ export default function Navbar() {
               <Link to="/" className="text-gray-600 hover:text-gray-900">
                 Home
               </Link>
-              <Link to="/products" className="text-gray-600 hover:text-gray-900">
+              <Link
+                to="/products"
+                className="text-gray-600 hover:text-gray-900"
+              >
                 Products
               </Link>
             </div>

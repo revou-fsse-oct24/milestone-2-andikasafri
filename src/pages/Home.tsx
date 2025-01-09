@@ -15,7 +15,7 @@ import { useState, useEffect } from "react";
 /**
  * Home page component with featured products and categories
  * Includes loading state, animations, and magnetic buttons
- * 
+ *
  * @component
  */
 export default function Home() {

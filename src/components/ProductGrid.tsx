@@ -12,7 +12,7 @@ interface ProductGridProps {
 /**
  * Grid layout for displaying multiple product cards
  * Handles loading states and empty product lists
- * 
+ *
  * @component
  * @example
  * ```tsx
@@ -33,7 +33,7 @@ export function ProductGrid({ products, isLoading }: ProductGridProps) {
   }
 
   return (
-    <div 
+    <div
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
       role="grid"
       aria-label="Products grid"

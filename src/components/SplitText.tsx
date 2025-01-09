@@ -38,7 +38,7 @@ interface AnimatedStyle {
 /**
  * Animated text component that splits text into individual letters
  * Each letter animates independently with configurable animations
- * 
+ *
  * @component
  * @example
  * ```tsx

@@ -14,7 +14,7 @@ interface ContainerScrollProps {
 /**
  * A container component with scroll-based animations
  * Uses Framer Motion for smooth animations and transforms
- * 
+ *
  * @component
  * @example
  * ```tsx
@@ -43,13 +43,13 @@ export const ContainerScroll: React.FC<ContainerScrollProps> = ({
     const checkMobile = () => {
       setIsMobile(window.innerWidth <= 768);
     };
-    
+
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const scaleDimensions = () => isMobile ? [0.7, 0.9] : [1.05, 1];
+  const scaleDimensions = () => (isMobile ? [0.7, 0.9] : [1.05, 1]);
 
   const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]);
   const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());

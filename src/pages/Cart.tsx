@@ -6,7 +6,10 @@ export default function Cart() {
   const { items, removeItem, updateQuantity } = useCartStore();
 
   // Calculate the total dynamically
-  const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = items.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   if (items.length === 0) {
     return (
