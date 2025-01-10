@@ -1,6 +1,6 @@
 # E-commerce Web Application
 
-![Website Screenshot](/assets/lulu.gif)()
+[![Website Screenshot](/assets/lulu.gif)](https://e-commerce-andika.vercel.app/)
 
 Welcome to the **E-commerce Web Application** project! This document provides an overview of the project, its structure, features, and the struggles faced during its development. This README will serve as a comprehensive guide to understanding and using the application.
 

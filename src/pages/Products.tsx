@@ -77,29 +77,35 @@ export default function Products() {
 
         {/* Category Filters */}
         <div className="flex space-x-2 overflow-x-auto pb-2 md:pb-0">
-          <button
-            className={`px-4 py-2 rounded-lg ${
-              selectedCategory === null
-                ? "bg-blue-600 text-white"
-                : "bg-gray-100 text-gray-800"
-            }`}
-            onClick={() => setSelectedCategory(null)}
-          >
-            All
-          </button>
-          {categories?.map((category: Category) => (
+          {/* Check if categories array is empty */}
+          {categories?.length === 0 ? (
+            // If categories array is empty, render the explicit "All" button
             <button
-              key={category.id}
-              className={`px-4 py-2 rounded-lg whitespace-nowrap ${
-                selectedCategory === category.id
+              className={`px-4 py-2 rounded-lg ${
+                selectedCategory === null
                   ? "bg-blue-600 text-white"
                   : "bg-gray-100 text-gray-800"
               }`}
-              onClick={() => setSelectedCategory(category.id)}
+              onClick={() => setSelectedCategory(null)}
             >
-              {category.name}
+              All
             </button>
-          ))}
+          ) : (
+            // If categories array is not empty, render the categories mapping
+            categories?.map((category: Category) => (
+              <button
+                key={category.id}
+                className={`px-4 py-2 rounded-lg whitespace-nowrap ${
+                  selectedCategory === category.id
+                    ? "bg-blue-600 text-white"
+                    : "bg-gray-100 text-gray-800"
+                }`}
+                onClick={() => setSelectedCategory(category.id)}
+              >
+                {category.name}
+              </button>
+            ))
+          )}
         </div>
       </div>
 

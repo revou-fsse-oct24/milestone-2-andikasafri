@@ -88,7 +88,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Rest of the component remains the same */}
       {/* Categories Section */}
       <ContainerScroll
         titleComponent={
