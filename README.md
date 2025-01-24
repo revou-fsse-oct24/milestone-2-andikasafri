@@ -1,16 +1,8 @@
 # E-commerce Web Application
 
-[![Website Screenshot](/assets/lulu.gif)](https://e-commerce-andika.vercel.app/)
-
 Welcome to the **E-commerce Web Application** project! This document provides an overview of the project, its structure, features, and the struggles faced during its development. This README will serve as a comprehensive guide to understanding and using the application.
 
 ---
-
-Connect with me:
-
-[![Linkedin Badge](https://img.shields.io/badge/-Andika_Safri-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/andika-safri/)
-[![Instagram Badge](https://img.shields.io/badge/-Andika_Safri-purple?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/dikko_pujangga/)
-[![Gmail Badge](https://img.shields.io/badge/-andika.saf3@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white)](mailto:andika.saf3@gmail.com)
 
 ## **Table of Contents**
 
@@ -26,7 +18,7 @@ Connect with me:
 
 ## **Project Overview**
 
-This project is a modern e-commerce web application built with **React** and **TypeScript**. It is designed to provide a seamless shopping experience with a responsive UI, efficient state management, and advanced animations. The application includes features such as user authentication, a product catalog, a shopping cart, and more.
+This project is a modern e-commerce web application built with **Next.js** and **TypeScript**. It is designed to provide a seamless shopping experience with a responsive UI and efficient state management. The application includes features such as user authentication, a product catalog, a shopping cart, and more.
 
 ---
 
@@ -38,10 +30,8 @@ This project is a modern e-commerce web application built with **React** and **T
   - Add, update, and remove items from the shopping cart.
   - Pagination and category filtering.
 - **Responsive Design**: Optimized for desktop and mobile.
-- **Animations**: Interactive animations using Framer Motion.
 - **State Management**: Centralized state using Zustand.
-- **API Integration**: Data fetching with React Query.
-- **Performance Optimization**: Built with Vite for faster builds and optimized performance.
+- **API Integration**: Data fetching from a RESTful API using the Fetch API.
 
 ---
 
@@ -55,22 +45,15 @@ The project is organized into the following directories:
 - **`src/store`**: State management logic using Zustand.
 - **`src/types`**: TypeScript type definitions.
 - **`src/hooks`**: Custom React hooks.
-- **`src/styles`**: Tailwind CSS global styles.
-- **Configuration Files**:
-  - `vite.config.ts`: Configures Vite.
-  - `tsconfig.json`: Configures TypeScript.
+- **`src/styles`**: Global styles.
 
 ---
 
 ## **Technologies Used**
 
-- **Frontend**: React, TypeScript, Tailwind CSS, Framer Motion
+- **Frontend**: Next.js, TypeScript
 - **State Management**: Zustand
-- **Data Fetching**: React Query
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **Animations**: Framer Motion
-- **API**: Axios for HTTP requests
+- **API**: Fetch API for HTTP requests
 
 ---
 
@@ -81,8 +64,8 @@ To run this project locally, follow these steps:
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/revou-fsse-oct24/milestone-2-andikasafri.git
-   cd your-repo-directory
+   git clone https://github.com/yourusername/yourproject.git
+   cd yourproject
    ```
 
 2. **Install Dependencies**:
@@ -97,17 +80,6 @@ To run this project locally, follow these steps:
    npm run dev
    ```
 
-4. **Build the Project**:
-
-   ```bash
-   npm run build
-   ```
-
-5. **Preview the Build**:
-   ```bash
-   npm run preview
-   ```
-
 ---
 
 ## **Struggles Faced**
@@ -116,20 +88,12 @@ To run this project locally, follow these steps:
 
    - Initial difficulty in replacing props drilling with Zustand for centralized state management.
 
-2. **Implementing Authentication with React Query**:
+2. **Implementing Authentication**:
 
-   - Challenges in handling tokens and refresh workflows.
+   - Challenges in handling tokens and user sessions.
 
-3. **Optimizing Performance with Vite**:
-
-   - Transitioning from Webpack and configuring Vite for large datasets.
-
-4. **Understanding Tailwind CSS**:
-
-   - Adjusting to the utility-first CSS approach.
-
-5. **Debugging Issues with Framer Motion**:
-   - Resolving errors in animation configurations.
+3. **Debugging Issues**:
+   - Resolving errors in API integration and state management.
 
 ---
 
@@ -145,8 +109,7 @@ To run this project locally, follow these steps:
    - Enhance keyboard navigation and ARIA roles.
 
 3. **Performance Optimization**:
-   - Use `React.memo` or `useMemo` for optimization.
-   - Implement lazy loading for components.
+   - Use memoization techniques for optimization.
 
 ---
 
